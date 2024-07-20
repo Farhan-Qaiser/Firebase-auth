@@ -20,6 +20,9 @@ const Home = () => {
     setPassword(e.target.value)
   }
   function handleSignup() {
+    if (!email||!password) {
+      setError('Email or Password Missing')
+    }
     createUserWithEmailAndPassword(auth,email,password)
     .then((userCredentials)=>{
       const user = userCredentials.user
@@ -33,6 +36,9 @@ const Home = () => {
     })
   }
   function handleSignin() {
+    if (!email||!password) {
+      setError('Email or Password Missing')
+    }
     signInWithEmailAndPassword(auth,email,password)
     .then((userCredentials)=>{
       const user = userCredentials.user
