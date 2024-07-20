@@ -26,7 +26,9 @@ const Home = () => {
     createUserWithEmailAndPassword(auth,email,password)
     .then((userCredentials)=>{
       const user = userCredentials.user
-      console.log(user)
+      console.log(user)      
+      navigate('./Private')
+
     })
     .catch((error)=>{
       const errorCode = error.code

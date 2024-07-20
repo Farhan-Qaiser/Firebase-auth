@@ -7,6 +7,7 @@ import { useState,useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from './firebase'
 import './App.css'
+import Spinner from 'react-bootstrap/Spinner';
 
 const App = () => {
 
